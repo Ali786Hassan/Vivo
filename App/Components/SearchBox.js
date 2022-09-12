@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
         width: 380,
         height:50,
         borderRadius:50,
-        marginTop:-20,
+        marginTop:70,
         marginBottom:-30,
         marginLeft:25,
         borderColor:'#e3e3e3',
         borderWidth:1,
-        elevation:5,
+        elevation:3,
         flexDirection:'row'
         },
     iconsearch:{

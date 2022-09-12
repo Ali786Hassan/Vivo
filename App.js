@@ -1,28 +1,28 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeScreen from './App/Screens/HomeScreen';
 import Register from './App/Screens/Register';
 import Dashboard from './App/Screens/Dashboard';
 import ClassIX from './App/Screens/ClassIX';
 import ClassX from './App/Screens/ClassX';
 import Teachers from './App/Screens/Teachers';
-import Login from './App/Screens/Login';
 import AccountScreen from './App/Screens/AccountScreen';
-
-
+import Welcome from './App/Screens/Welcome';
+import LS from './App/Screens/LS';
+import Home from './App/Screens/Home';
+import Details from './App/Screens/Details';
 const Stack = createNativeStackNavigator();
 
 
 const App = () => {
 
   return (
-   
+    
     <NavigationContainer>
-       
-       {<Stack.Navigator initialRouteName='Login' screenOptions={{headerShown: false}}>
-       <Stack.Screen name='Login' component={Login}></Stack.Screen>
+       {<Stack.Navigator initialRouteName='Welcome' screenOptions={{headerShown: false}}>
+       <Stack.Screen name='Welcome' component={Welcome}></Stack.Screen>
+       <Stack.Screen name='LS' component={LS}></Stack.Screen>
+       <Stack.Screen name='Register' component={Register}></Stack.Screen>
        <Stack.Screen name='AccountScreen' component={AccountScreen}></Stack.Screen>
         <Stack.Screen name='Dashboard' component={Dashboard}></Stack.Screen>
         <Stack.Screen name='ClassIX' component={ClassIX}></Stack.Screen>
@@ -30,7 +30,7 @@ const App = () => {
         <Stack.Screen name='Teachers' component={Teachers}></Stack.Screen>
      </Stack.Navigator>}
      </NavigationContainer>
-  );
+   );
   
   }
 export default App;

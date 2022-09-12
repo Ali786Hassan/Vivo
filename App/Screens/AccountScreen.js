@@ -1,53 +1,59 @@
 import React from 'react';
 import colors from '../Assets/config/colors';
-import { View,Text,StyleSheet,TextInput, TouchableOpacity, StatusBar,ImageBackground} from 'react-native';
+import { View,Text,StyleSheet,TextInput, TouchableOpacity, StatusBar,Image} from 'react-native';
+import  AntDesign  from 'react-native-vector-icons/AntDesign';
+
 function AccountScreen({navigation}) {
     return (
-        <View>
-            <ImageBackground style={styles.backimg}
-             source={require('../Assets/config/ali5.jpg')}>
+        <View style={styles.container}>
+            <Image style={styles.image}
+            source={require('../Assets/config/add-user.png')}/>
         
          <StatusBar
-         backgroundColor="#645b59"
+         backgroundColor="#AAAAAA"
          barStyle="light-content"/>
-         <View style={styles.container1}>
-         <Text style={styles.Dashboard}>
-             Create Account
-         </Text>
-         </View>
+         <TouchableOpacity>
+         <AntDesign style={styles.Icon} 
+          onPress={()=>  navigation.goBack()}
+                 size={30}
+                 name='arrowleft'/>
+         </TouchableOpacity>
+         <View style={styles.con}>
          <TextInput
          style={styles.input}
-         placeholder="User name"
+         placeholder="@User name"
+         placeholderTextColor={'#AAAAAA'}
          />
          <TextInput
          style={styles.input2}
          placeholder="Email"
-         />
-         <TextInput
-         style={styles.input1}
-         placeholder="Phone no"
-         secureTextEntry
+         placeholderTextColor={'#AAAAAA'}
          />
          <TextInput
          style={styles.input1}
          placeholder="Password"
+         placeholderTextColor={'#AAAAAA'}
          secureTextEntry
          />
-         
-         <View style={styles.btncontainer}>
-             <TouchableOpacity style={styles.userbtn} onPress={()=>  alert('Your Account have been Sucessful')}>
-                 <Text style={styles.btntext}>Create</Text>
-             </TouchableOpacity>
-             <TouchableOpacity style={styles.userbtn} onPress={()=>  navigation.navigate('Login')}>
-                 <Text style={styles.btntext}>Back</Text>
-             </TouchableOpacity>
-             
+         <TextInput
+         style={styles.input1}
+         placeholder="Re-Type Password"
+         secureTextEntry
+         />
+         <Image style={styles.image4}
+            source={require('../Assets/config/sig.png')}/>
+         <TouchableOpacity style={styles.btn} onPress={()=>  navigation.navigate('LS')}>
+         <Text style={styles.text}>
+             Sign up
+           </Text>
+         </TouchableOpacity>
+         <Text style={{marginTop:20,marginLeft:-30,fontSize:17,color:colors.lightgray,}}>Already have an account?</Text>
+         <TouchableOpacity onPress={()=>  navigation.navigate('LS')}>
+          <Text style={{marginLeft:225,marginTop:-23,fontWeight:'bold',color:'#05A5FA',fontSize:17}}>Sign in</Text>
+         </TouchableOpacity>
          </View>
-         </ImageBackground>
+        
       </View>
-     
-      
-    
     );
 }
 const styles = StyleSheet.create({
@@ -57,92 +63,84 @@ const styles = StyleSheet.create({
         alignItems:'center',
         backgroundColor:'#ffffff',
     },
-    backimg:{
-        width:'100%',
-        height:'100%',
+    image:{
+        marginTop:20,
+        width:80,
+        height:80,
     },
-    container1:{
-        width:400,
-        height:70,
-        marginTop:25,
-        marginLeft:5,
-        marginBottom:-40,
-        borderRadius:15,
-        color:colors.light,
-        backgroundColor:'#3333cc',
-        elevation:5,
+    image4:{
+        marginTop:10,
+        marginLeft:20,
+    },
+    con:{
+    flex:1,
+    marginTop:-110,
+    marginRight:15,
+    alignItems:'center',
+    width:'100%',
+    height:'20%',
+    },
+    Icon:{
+        marginTop:-80,
+        marginLeft:-180,
+        color:'black', 
+    },
+    btn:{
+        backgroundColor:'#05A5FA',
         alignItems:'center',
         justifyContent:'center',
-    },
-    btncontainer:{
-        flexDirection:'row',
-        justifyContent:'space-between',
         width:'90%',
-        elevation:5,
-    },
-    userbtn:{
-        backgroundColor: '#186DEE',
-        marginTop:20,
-        borderRadius:20,
         padding:15,
-        width: '45%',
+        borderRadius:30,
+        marginTop:20,
+        marginLeft:12
     },
-    Dashboard:{
-        marginTop:2,
-        color:'#ffffff',
-        fontSize:25,
-        fontWeight:'bold', 
+    text:{
+        fontSize:24,
+        fontWeight:'bold',
+        color:'white',
     },
     input:{
         width:'90%',
-        backgroundColor:'#e8e8e8',
-        marginTop:180,
+        backgroundColor:'#ffffff',
+        borderColor:'#e8e8e8',
+        borderWidth:2,
+        marginTop:140,
         padding:13,
         marginBottom:10,
+        fontFamily:'Roboto-Light',
+        fontSize:17,
         marginLeft:20,
-        elevation:5,
-        borderRadius:20,
+        elevation:3,
+        borderRadius:30,
     },
     input1:{
         width:'90%',
-        backgroundColor:'#e8e8e8',
+        backgroundColor:'#ffffff',
+        borderColor:'#e8e8e8',
+        borderWidth:2,
         padding:13,
         marginBottom:10,
+        fontFamily:'Roboto-Light',
+        fontSize:17,
         marginLeft:20,
         marginTop:12,
-        elevation:5,
-        borderRadius:20,
+        elevation:3,
+        borderRadius:30,
     },
     input2:{
         width:'90%',
-        backgroundColor:'#e8e8e8',
+        backgroundColor:'#ffffff',
+        borderColor:'#e8e8e8',
+        borderWidth:2,
         padding:13,
         marginBottom:10,
+        fontFamily:'Roboto-Light',
+        fontSize:17,
         marginLeft:20,
         marginTop:12,
-        elevation:5,
-        borderRadius:20,
-    },
-    text:{
-        textAlign:'center',
-        fontSize:30,
-        marginTop:-20,
-        fontFamily:"Festive-Regular",
-    },
-    userbtn:{
-        backgroundColor: '#186DEE',
-        marginTop:20,
-        borderRadius:20,
-        marginLeft:23,
-        marginRight:10,
-        padding:15,
-        width: '45%',
-    },
-    btntext:{
-        fontSize:20,
-        textAlign:'center',
-        color:colors.white,
-        fontWeight:'bold',
+        elevation:3,
+        borderRadius:30,
     },
 })
 export default AccountScreen;

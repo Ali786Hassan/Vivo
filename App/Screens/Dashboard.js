@@ -10,11 +10,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function Dashboard({navigation}) {
     return (
-    <View>
-    <ImageBackground style={styles.backimg}
-        source={require('../Assets/config/back.jpg')}>
+    <View style={styles.con}>
           <StatusBar
-         backgroundColor="#f4f4f4"
+         backgroundColor="#AAAAAA"
          barStyle="light-content"/>
           <View style={styles.container1}>
          
@@ -27,9 +25,9 @@ function Dashboard({navigation}) {
                 HOME
             </Text>
           </View>
-          <TouchableOpacity onPress={()=>  navigation.navigate('Login')}>
+          <TouchableOpacity onPress={()=>  navigation.navigate('LS')}>
           <Icon style={styles.Icon1} 
-                 size={40}
+                 size={35}
                  name='logout'/>
        </TouchableOpacity>
        <TouchableOpacity style={styles.btn} onPress={()=>  navigation.navigate('ClassIX')}>
@@ -47,35 +45,26 @@ function Dashboard({navigation}) {
          Teachers
        </Text>
      </TouchableOpacity>
-    </ImageBackground>
     </View>
-       
-       
     );
 }
-const Stack = createNativeStackNavigator();
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Dashboard} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
 const styles = StyleSheet.create({
     container1:{
-        width:400,
-        height:70,
-        marginTop:15,
+        width:345,
+        height:65,
+        marginTop:5,
         marginBottom:20,
-        marginLeft:5,
+        marginLeft:10,
         borderRadius:10,
-        backgroundColor:'#3333cc',
+        backgroundColor:'#05A5FA',
         elevation:5,
         alignItems:'center',
         justifyContent:'center',
+    },
+    con:{
+       flex:1,
+       backgroundColor:'#ffffff',
     },
     backimg:{
         width:'100%',
@@ -84,55 +73,65 @@ const styles = StyleSheet.create({
     Icon:{
         color:colors.white,
         marginTop:2,
-        marginRight:340,
+        marginRight:290,
     },
     Icon1:{
       color:colors.white,
-      marginTop:-75,
-      marginLeft:355,
+      marginTop:-70,
+      marginLeft:310,
   },
     Dashboard:{
         marginTop:-35,
-        color:'#ffffff',
+        color:'white',
         fontSize:25,
         fontWeight:'bold', 
-        fontFamily:'Brygada-Bold',
+        fontFamily:'OpenSans-BoldItalic',
     },
     btn:{
-      width:330,
+      width:300,
       height:60,
-      borderRadius:25,
-      marginTop:100,
+      borderRadius:30,
+      marginTop:110,
       marginLeft:35,
       alignItems:'center',
       justifyContent:'center',
-      backgroundColor:'#186DEE',
+      elevation:5,
+      backgroundColor:'#ffffff',
+      borderColor:'#05A5FA',
+      borderWidth:4,
   },
   btn2:{
-    width:330,
+        width:300,
         height:60,
-        borderRadius:25,
-        marginTop:30,
+        borderRadius:30,
+        marginTop:50,
         marginLeft:35,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor:'#186DEE',
+        elevation:5,
+        backgroundColor:'#ffffff',
+        borderColor:'#05A5FA',
+        borderWidth:4,
+        
   },
   btn3:{
-    width:330,
+        width:300,
         height:60,
-        borderRadius:25,
-        marginTop:30,
+        borderRadius:30,
+        marginTop:50,
         marginLeft:35,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor:'#009933',
+        elevation:5,
+        backgroundColor:'#ffffff',
+        borderColor:'#33cc33',
+        borderWidth:4,
   },
   buttontext:{
-    color:colors.white,
+    color:colors.lightgray,
     fontWeight:'bold',
     textTransform:'uppercase',
-    fontSize:20,
+    fontSize:18,
     textAlign:'center',
 },
 })
