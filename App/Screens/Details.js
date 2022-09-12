@@ -57,7 +57,7 @@ const Details = ({route, navigation}) => {
             height: 40,
             borderRadius: 10,
             backgroundColor: COLOURS.accent,
-            marginRight:45,
+           // marginRight:10,
             opacity: isTopOfTheWeek ? 1 : 0.5,
             justifyContent: 'center',
             alignItems: 'center',
@@ -118,7 +118,7 @@ const Details = ({route, navigation}) => {
               style={{
                 fontSize: 12,
                 color: COLOURS.black,
-                marginTop:-20,
+                marginTop:-10,
                 opacity: 0.5,
               }}>
               Size
@@ -137,7 +137,7 @@ const Details = ({route, navigation}) => {
               style={{
                 fontSize: 12,
                 color: COLOURS.black,
-                marginTop:-20,
+                marginTop:-10,
                 opacity: 0.5,
               }}>
               Crust
@@ -156,7 +156,7 @@ const Details = ({route, navigation}) => {
               style={{
                 fontSize: 12,
                 color: COLOURS.black,
-                marginTop:-15,
+                marginTop:-10,
                 opacity: 0.5,
               }}>
               Delivery
@@ -195,7 +195,7 @@ const Details = ({route, navigation}) => {
           fontSize: 20,
           fontWeight: '700',
           color: COLOURS.black,
-          marginTop:-70
+          marginTop:-50
         }}>
         Ingredients
       </Text>
@@ -205,9 +205,9 @@ const Details = ({route, navigation}) => {
             <View
               key={index}
               style={{
-                margin: 8,
-                width: 70,
-                height: 70,
+                margin: 10,
+                width: 80,
+                height: 80,
                 borderRadius: 20,
                 backgroundColor: COLOURS.white,
                 elevation: 5,
@@ -233,13 +233,10 @@ const Details = ({route, navigation}) => {
           style={{
             width: '75%',
             height: 60,
-            backgroundColor: COLOURS.accent,
-            // borderTopRightRadius: 20,
-            // borderTopLeftRadius: 20,
+            backgroundColor: COLOURS.accentRed,
             borderRadius:40,
             justifyContent: 'center',
-            marginBottom:135,
-            marginLeft:-60,
+            marginBottom:110,
             alignItems: 'center',
             flexDirection: 'row',
           }}>

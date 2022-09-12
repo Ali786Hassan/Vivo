@@ -26,15 +26,14 @@ const Home = ({navigation}) => {
         onPress={() => setCurrentSelected(index)}>
         <View
           style={{
-            width: 105,
-            height: 160,
+            width: 120,
+            height: 170,
             justifyContent: 'space-evenly',
             alignItems: 'center',
             backgroundColor:
               currentSelected == index ? COLOURS.accent : COLOURS.white,
             borderRadius: 20,
-            margin: 5,
-            marginRight:5,
+            margin: 10,
             elevation: 5,
           }}>
           <View style={{width: 60, height: 60}}>
@@ -105,14 +104,14 @@ const Home = ({navigation}) => {
         }>
         <View
           style={{
-            width: '80%',
+            width: '90%',
             height: 140,
             backgroundColor: COLOURS.white,
             borderRadius: 20,
             elevation: 4,
             position: 'relative',
             padding: 15,
-            marginLeft:-55,
+            //marginLeft:-55,
             marginTop:-5,
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -179,7 +178,7 @@ const Home = ({navigation}) => {
             }}>
             <View
               style={{
-                width: 85,
+                width: 80,
                 height: 50,
                 backgroundColor: COLOURS.accent,
                 borderTopRightRadius: 20,
@@ -264,7 +263,7 @@ const Home = ({navigation}) => {
                 style={{
                   fontSize: 28,
                   color: COLOURS.black,
-                  marginRight:40
+                  
                 }}
               />
             </TouchableOpacity>
@@ -309,7 +308,7 @@ const Home = ({navigation}) => {
                 paddingVertical: 5,
                 borderBottomWidth: 1,
                 borderBottomColor: COLOURS.black + 20,
-                width: '80%',
+                width: '90%',
                 marginLeft: 10,
                 letterSpacing: 1,
               }}

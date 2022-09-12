@@ -74,7 +74,7 @@ export const COLOURS = {
       image: require('../Assets/Images/pizza.png'),
       items: [
         {
-          name: 'Pepperoni Pizza',
+          name: 'Pepperoni',
           weight: 250,
           rating: '5.0',
           price: 199,
@@ -91,7 +91,7 @@ export const COLOURS = {
           ],
         },
         {
-          name: 'Plain Cheese Pizza',
+          name: ' Cheese Pizza',
           weight: 300,
           rating: '4.5',
           price: 299,
@@ -108,7 +108,7 @@ export const COLOURS = {
           ],
         },
         {
-          name: 'Mexican Green Wave',
+          name: 'Mexican Green',
           weight: 350,
           rating: '4.2',
           price: 499,

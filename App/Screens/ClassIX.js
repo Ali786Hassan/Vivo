@@ -124,7 +124,7 @@ function Test({navigation}) {
             <View style={{width:410, height:1, backgroundColor:colors.gray}}></View>
             <View style={{flexDirection:'row'}}> 
             <TouchableOpacity style={[isPress ? styles.absent : styles.present]}>
-                <Text style={{ marginLeft:10,marginTop:4,color:'white',fontWeight:'bold'}}>Absent</Text>
+                <Text style={{ marginLeft:12,marginTop:4,color:'white',fontWeight:'bold'}}>absent</Text>
 
             </TouchableOpacity>
             <TouchableOpacity style={[isPress ? styles.present : styles.absent]}>
